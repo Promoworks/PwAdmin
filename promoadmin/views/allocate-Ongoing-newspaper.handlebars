@@ -1,0 +1,71 @@
+
+    <div class="content-wrap">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 p-0">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <h1>Set Allocaters</h1>
+                            </div>
+                        </div>
+                    </div><!-- /# column -->
+                    <div class="col-lg-4 p-0">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <ol class="breadcrumb text-right">
+                                    <li><a href="#">Dashboard</a></li>
+                                    <li class="active">Set Allocaters</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div><!-- /# column -->
+                </div><!-- /# row -->
+                <div class="main-content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card alert">
+                                <div class="card-header">
+                                    <h4>Set Allocaters</h4>
+									<div class="card-header-right-icon">
+                                        <ul>
+                                            <li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
+                                            <li class="doc-link"><a href="#"><i class="ti-link"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+									<div class="menu-upload-form">
+
+										<form class="form-horizontal" action="/ads/upload-Ongoing-newspaper"  method="post">
+
+                                                       
+                                            
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">Allocate To</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control" name="allocateTo" id="allocateTo">
+                                                     <option value="To Whom">-------------------------------------------------------------------------------------------------Allocate To ?--------------------------------------------------------------------------------------------</option>
+                                                        {{#each Allocaters}}
+                                                    <option value="{{this.username}}">{{this.username}}</option>
+                                                        {{/each}}
+                                                </select>
+                                            </div>
+                                        </div>
+                                            
+              
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <button type="submit" class="btn btn-primary  btn-block m-b-10">Set</button>
+                                            </div>
+                                        </div>
+                                    </form>
+									</div>
+                                </div>
+							</div><!-- /# card -->
+						</div><!-- /# column -->
+					</div><!-- /# row -->
+				</div><!-- /# main content -->
+            </div><!-- /# container-fluid -->
+        </div><!-- /# main -->
+    </div><!-- /# content wrap -->

@@ -1,0 +1,68 @@
+<style>
+    .navbar{
+            display:none !important;
+    }
+    #leftsidebar
+    {
+        display:none !important;
+    }
+</style>
+
+
+
+
+<div class="authentication">
+    <div class="card">
+        <div class="body">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header slideDown">
+                        <div class="logo"><img src="/images/Twiter.jpg" alt="Promoworks" width="15%;"></div>
+                        <h1>Promoworks Admin</h1>
+                        <ul class="list-unstyled l-social">
+                            <li><a href="https://www.facebook.com/PromoWorksOfficial/"><i class="zmdi zmdi-facebook-box"></i></a></li>
+                            <li><a href="https://www.pinterest.com/promoworkslive/"><i class="zmdi zmdi-pinterest-box"></i></a></li>                            
+                            <li><a href="https://twitter.com/promoworkslive"><i class="zmdi zmdi-twitter"></i></a></li>
+                        </ul>
+                    </div>                        
+                </div>  
+                
+                
+    <div class="col-lg-12">
+
+          {{#if success_msg}}
+            <div class="alert alert-success text-center">{{success_msg}}</div>
+          {{/if}}
+
+          {{#if error_msg}}
+            <div class="alert alert-danger text-center">{{error_msg}}</div>
+          {{/if}}
+
+          {{#if error}}
+            <div class="alert alert-danger text-center">{{error}}</div>
+          {{/if}}
+    </div>
+                
+                
+                
+                <form class="col-lg-12" action = "/forgot" method="post" >
+                    <h5 class="title">Forgot Password?</h5>
+                    <small class="msg">Enter your e-mail address below to reset your password.</small>
+                    <div class="form-group form-float">
+                            <div class="form-line">
+                                <input type="email" class="form-control" name="email" id="email">
+                                <label class="form-label">Email</label>
+                            </div>
+                        </div>
+               
+                <div class="col-lg-12">
+                    <button type="submit" class="btn btn-raised btn-primary waves-effect">Reset Password</button>
+                </div>
+                </form>
+                <div class="col-lg-12 m-t-20">
+                    <a href="/" title="">Sign In!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+
+    <!-- SITE CONTENT -->
+    <div class="wrapper">
+        <section class="titlebar">
+            <h1 class="page-title"><span>Login </span>us</h1>
+            <div id="particles-js"></div>
+        </section>
+        
+        <hr class="col-md-6 bottom_60">
+
+        <div class="cont">
+            <section class="contact col-md-8 offset-md-2 top_90">
+                <div class="contact-info text-center">
+                    <p>#35/5, Eldams Road, Alwarpet, Chennai, Tamil Nadu 600018.</p> 
+                    <a href="mailto:hello@promo.works">hello@promo.works</a> 
+                    <p>73 9596 2447</p>
+                </div>
+                <div class="contact-form top_90">
+                              {{#if success_msg}}
+            <div class="alert alert-success text-center">{{success_msg}}</div>
+          {{/if}}
+
+          {{#if error_msg}}
+            <div class="alert alert-danger text-center">{{error_msg}}</div>
+          {{/if}}
+
+          {{#if error}}
+            <div class="alert alert-danger text-center">{{error}}</div>
+          {{/if}}
+                    <form class="row" action ="/allocaters/allocaterpost" method="post" >
+                        <div class="col-md-6">
+                            <input class="inp" type="text" placeholder="username" name="allocateUser" id="allocateUser" autocomplete="off">
+                        </div>
+
+                        <div class="col-md-6">
+                            <input class="inp" type="text" placeholder="password" name="allocatePassword" id="allocatePassword" autocomplete="off">
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <input type="submit" value="Here We Go" class="site-btn2">
+                        </div>
+                    </form>
+                </div>
+
+
+
+            </section>
+
+        </div> <!-- cont end -->
+    </div> <!-- wrapper end -->
+
+    <footer>
+       <div class="cont">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12 copyright">
+                    <img src="/images/logo.png" alt="">
+                    <p>© 2018 Promoworks</p>
+                </div>
+                <div class="col-md-4 d-sm-none d-md-block">
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook"></i>  </a>
+                        <a href="#"><i class="fab fa-twitter"   aria-hidden="true"></i>  </a>
+                        <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i>  </a>
+                        <a href="#"><i class="fab fa-behance"   aria-hidden="true"></i>  </a>
+                        <a href="#"><i class="fab fa-dribbble"  aria-hidden="true"></i>  </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 d-none d-sm-block getintouch">
+                    <a href="#">
+                        <strong>Get In Touch</strong><br>
+                        <p>hello@promo.works</p>
+                    </a>
+                </div>
+            </div>
+       </div>
+    </footer>

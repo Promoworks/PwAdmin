@@ -1,0 +1,82 @@
+<header>
+        <img src="/images/logo.jpg" alt="" class="img-responsive" width="50px" height="50px">
+        <div class="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- SITE CONTENT -->
+    <div class="wrapper">
+        <section class="titlebar">
+            <h1 class="page-title"><span>Update </span>MyAccount</h1>
+            <div id="particles-js"></div>
+        </section>
+        
+        <hr class="col-md-6 bottom_60">
+
+        <div class="cont">
+            <section class="contact col-md-8 offset-md-2 top_90">
+
+                <div class="contact-form top_90">
+                              {{#if success_msg}}
+            <div class="alert alert-success text-center">{{success_msg}}</div>
+          {{/if}}
+
+          {{#if error_msg}}
+            <div class="alert alert-danger text-center">{{error_msg}}</div>
+          {{/if}}
+
+          {{#if error}}
+            <div class="alert alert-danger text-center">{{error}}</div>
+          {{/if}}
+                    <form class="row" action ="/home/updateClientProfile" method="post" >
+                        <div class="col-md-6" style="display:none;">
+                            <input class="inp" type="text" placeholder="username" name="yd" id="yd" value= "{{user._id}}" autocomplete="off">
+                        </div>          
+                        <div class="col-md-6">
+                            <input class="inp" type="text" placeholder="mobile" name="mobile" id="mobile" value= "{{user.mobile}}" autocomplete="off">
+                        </div>
+
+                        <div class="col-md-6">
+                            <input class="inp" type="text" placeholder="email" name="email" id="email" value= "{{user.email}}" autocomplete="off">
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <input type="submit" value="Update" class="site-btn2">
+                        </div>
+                    </form>
+                </div>
+
+
+
+            </section>
+
+        </div> <!-- cont end -->
+    </div> <!-- wrapper end -->
+
+    <footer>
+       <div class="cont">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12 copyright">
+                    <img src="/images/logo.png" alt="">
+                    <p>© 2018 Promoworks</p>
+                </div>
+                <div class="col-md-4 d-sm-none d-md-block">
+                    <div class="social">
+                        <a href="#"><i class="fa fa-facebook"></i>  </a>
+                        <a href="#"><i class="fa fa-twitter"   aria-hidden="true"></i>  </a>
+                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>  </a>
+                        <a href="#"><i class="fa fa-behance"   aria-hidden="true"></i>  </a>
+                        <a href="#"><i class="fa fa-dribbble"  aria-hidden="true"></i>  </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 d-none d-sm-block getintouch">
+                    <a href="#">
+                        <strong>Get In Touch</strong><br>
+                        <p>hello@promo.works</p>
+                    </a>
+                </div>
+            </div>
+       </div>
+    </footer>

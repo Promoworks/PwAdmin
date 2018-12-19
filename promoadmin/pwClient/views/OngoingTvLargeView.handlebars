@@ -1,0 +1,60 @@
+<header>
+    <a href="/home/home/{{user.username}}"><img src="/images/logo.jpg" alt="" class="img-responsive" width="50px" height="50px"></a>
+        <div class="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+
+<div class="wrapper">
+    
+            <section class="titlebar">
+            <h1 class="page-title"><span>Ongoing </span>Tv Ads</h1>
+            <div id="particles-js"></div>
+        </section>
+    
+    
+        <div class="cont">
+            <section class="portfolio-single type-2 top_90">
+
+                <div class="portfolio-images top_60 row">
+  {{#each OngoingTv}}
+                    {{#if Ongoing}}
+
+                    <figure class="col-md-6 bottom_30">
+                             <img src="{{this.tv_final_path}}" alt="" id="image" name="image" class="img-responsive">
+
+                    </figure>
+            
+          
+           <figure class="col-md-6 bottom_30" style="line-height:4em;">
+               <p style="text-decoration:underline;text-align:center">Copy Your Tv Ads Id before posting Comments.</p><br/>
+               <label>Tv Ads</label><br/>
+                    <input class="inp" type="text" placeholder="password" name="foo" id="foo" autocomplete="off" value="{{this._id}}" readonly>
+         <div class="text-center">
+               <a href="javascript:void(0)" class="btn" data-clipboard-target="#foo">Copy</a>
+            </div>     
+
+
+                    {{/if}}
+                    {{/each}}
+                    
+                                <div class="text-center">
+               <a href="/progress/OngoingGiveMeAComment-Tv/{{user._id}}/{{user.username}}"  style="text-decoration:underline;text-align:center">Post Comments</a>
+            </div>
+       </figure>
+                  
+                </div>
+
+
+
+
+                    
+                    
+            </section>
+
+        </div> <!-- cont end -->
+
+    </div>

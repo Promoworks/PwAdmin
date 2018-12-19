@@ -1,0 +1,85 @@
+<section class="content">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2>Load Ongoing Brochure Design
+                <small class="text-muted">Welcome to Promoworks Application</small>
+                </h2>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+                <ul class="breadcrumb float-md-right">
+                    <li class="breadcrumb-item"><a href="javascript:void(0);"><i class="zmdi zmdi-home"></i> Promoworks</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Forms</a></li>
+                    <li class="breadcrumb-item active">Basic Form Elements</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <!-- Input -->
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+
+
+                        
+        <!-- File Upload | Drag & Drop OR With Click & Choose -->
+       
+
+                    <div class="body">
+                        
+                        
+                        <form action="/design/upload-Ongoing-brochure" class="dropzone" method="post" enctype="multipart/form-data">
+                            
+                            
+                            
+                        <div class="row clearfix">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="text" class="form-control" name="brandtype" id="brandtype" value="Brochure-Design" readonly />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                          <select class="form-control show-tick" name="toWhom" id="toWhom">
+                                    <option value="">-- Please select --</option>
+                                                     {{#each Clientuser}}
+                                                    <option value="{{this.username}}">{{this.username}}</option>
+                                                                                {{/each}}
+                                </select>
+                            </div>
+                        </div>
+
+                            
+                            
+                            <div class="dz-message">
+                                <div class="drag-icon-cph"> <i class="material-icons">touch_app</i> </div>
+                                        <h3>Drop files here or click to upload.</h3>
+                                 </div>
+                            <div class="fallback">
+                                <input name="file" type="file" multiple />
+                            </div>
+                            
+                            
+                        </form>
+                        
+                                                <a href= "javascript:history.back();" class="btn btn-raised btn-block bg-orange waves-effect"> <i class="material-icons">save</i> </a>
+
+                    </div>
+            
+                                
+                                
+       
+
+
+                </div>
+            </div>
+        </div>
+        <!-- #END# Input --> 
+
+
+
+    </div>
+</section>

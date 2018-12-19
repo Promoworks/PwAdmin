@@ -1,0 +1,127 @@
+    <div class="content-wrap">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 p-0">
+                        <div class="page-header">
+							<div class="page-title">
+								<h1>PROMOWORKS</h1>
+							</div>
+						</div>
+                    </div>
+                    <div class="col-lg-4 p-0">
+                        <div class="page-header">
+							<div class="page-title">
+								<ol class="breadcrumb text-right">
+									<li><a href="#">Dashboard</a></li>
+									<li><a href="#">Table</a></li>
+									<li class="active">Data Table</li>
+								</ol>
+							</div>
+						</div>
+                    </div>
+                </div>
+				<div class="main-content">
+					<div class="row">
+
+                        <div class="col-lg-6 col-lg-offset-2">
+                                <form class="form-horizontal" method="post" action="/allocaters/createAllocaters">
+
+                                                	 
+{{#if errors}}
+      {{#each errors}}
+        <div class="alert alert-danger text-center">{{msg}}</div>
+      {{/each}}
+{{/if}}
+                            <div class="card alert">
+
+                                <div class="card-header">
+                                    <h4>Creating New Allocaters</h4>
+                                    <div class="card-header-right-icon">
+                                        <ul>
+                                            <li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
+                                            <li class="doc-link"><a href="#"><i class="ti-link"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="input-states">
+                                            <div class="form-group has-warning has-feedback">
+                                                <div class="row">
+													<label class="col-sm-3 control-label">Allocaters Name</label>
+													<div class="col-sm-9">
+														<div class="input-group">
+															<span class="input-group-addon"><i class="ti-user"></i></span>
+															<input class="form-control" type="text" name="username" id="username">
+														</div>
+													</div>
+												</div>
+                                            </div>
+    
+    
+                                            <div class="form-group has-feedback">
+                                                <div class="row">
+													<label class="col-sm-3 control-label">Allocaters Mobile</label>
+													<div class="col-sm-9">
+														<div class="input-group">
+															<span class="input-group-addon"><i class="ti-user"></i></span>
+															<input class="form-control" type="text" name="mobile" id="mobile">
+														</div>
+													</div>
+												</div>
+                                            </div>              
+                                            <div class="form-group has-feedback">
+                                                <div class="row">
+													<label class="col-sm-3 control-label">Allocaters Password</label>
+													<div class="col-sm-9">
+														<div class="input-group">
+															<span class="input-group-addon"><i class="ti-user"></i></span>
+															<input class="form-control" type="text" name="password" id="password">
+														</div>
+													</div>
+												</div>
+                                            </div>                        
+                                    </div>
+                                </div>
+                                        
+                                                                                <div class="text-center">
+                                                    <button type="submit" class="btn btn-info btn-outline m-b-10 m-l-5">Submit</button>
+                                                </div>
+                                        
+                                        
+                                        
+                                      
+                                
+                            </div>
+                          </form>
+                        </div>
+            
+                        
+                        
+                        
+                        
+                        <!-- /# column -->
+					</div><!-- /# row -->
+				</div><!-- /# main content -->
+            </div><!-- /# container-fluid -->
+        </div><!-- /# main -->
+    </div><!-- /# content wrap -->
+
+
+
+
+
+
+	
+	<script type="text/javascript">
+$(document).ready(function() {
+    $('#bootstrap-data-table-export').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    } );
+} );
+	</script>
+
+

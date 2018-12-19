@@ -1,0 +1,67 @@
+
+<header>
+    <a href="/home/home/{{user.username}}"><img src="/images/logo.jpg" alt="" class="img-responsive" width="50px" height="50px"></a>
+        <div class="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+<div class="wrapper">
+
+                    <section class="titlebar">
+            <h1 class="page-title"><span>Ongoing </span>Tv Ads</h1>
+            <div id="particles-js"></div>
+        </section>
+    
+
+    
+                             {{#each OngoingTv}}
+    {{#if Ongoing}}
+            <div class="cont bg-space">
+            <section class="portfolio-single type-2 top_90">
+                <h2 class="title text-center">Ongoing Tv Ads</h2>
+
+                <div class="portfolio-images top_60 row">
+                                        {{#if Enable}}
+                        <a href="/progress/OngoingTvLargeView/{{this._id}}/{{this.toWhom}}" class="col-md-12 news-list bottom_60">
+                            <article class="news-box row">
+                                <figure class="col-md-2">
+                             <img src="{{this.tv_final_path}}" alt="" id="image" name="image" class="img-responsive">
+                                </figure>
+                                <div class="col-md-10 left-list">
+                                    <small>{{this.Adtype}}</small>
+                                    <h4 class="title">{{this._id}}</h4>
+                                    <p>Click Here to View Enlarge ...</p>
+                                    <div class="information">{{this.owner}}&nbsp; &nbsp;<span>{{this.tv_date}}</span>&nbsp; &nbsp;<span>{{this.tv_time}}</span></div>
+                                </div>
+                            </article>
+                        </a>
+                        {{/if}} 
+                </div>
+            </section>
+                </div>
+    
+    
+                {{/if}}
+                    {{/each}}
+                         
+      
+    
+    
+                    <div class="text-center">
+                        
+                                <a href="/progress/OngoingGiveMeAComment-Tv/{{user._id}}/{{user.username}}" class="text-center">Click here Leave a Reply</a>
+                    </div>
+
+    
+
+        
+    
+    
+
+    
+    
+    </div>
+

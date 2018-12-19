@@ -1,0 +1,55 @@
+
+<header>
+    <a href="/home/home/{{user.username}}"><img src="/images/logo.jpg" alt="" class="img-responsive" width="50px" height="50px"></a>
+        <div class="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+<div class="wrapper">
+                   <section class="titlebar">
+            <h1 class="page-title"><span>Completed </span>Brochure Designs</h1>
+            <div id="particles-js"></div>
+        </section>
+    
+
+    <!-- cont end -->
+
+            {{#each CompletedBrochure}}
+    {{#if Completed}}
+        <div class="cont">
+            <section class="portfolio-single type-2 top_90">
+                <div class="portfolio-images top_60 row">
+    
+                                <a href="/Completed/CompletedBrochureLargeView/{{this._id}}/{{this.toWhom}}" class="col-md-12 news-list bottom_60">
+
+                            <article class="news-box row">
+                                <figure class="col-md-7">
+                                        <iframe src = "{{this.brochure_final_path}}" width="100%" height="700px" allowfullscreen ></iframe>
+
+                                </figure>
+                                <div class="col-md-10 left-list">
+                                    <small>{{this.brandtype}}</small>
+                                    <h4 class="title">{{this._id}}</h4>
+                                    <p>Click Here to View &amp; Download  ...</p>
+                                    <div class="information">{{this.owner}}&nbsp; &nbsp;<span>{{this.brochure_final_path}}</span>&nbsp; &nbsp;<span>{{this.brochure_time}}</span></div>
+                                </div>
+
+                            </article>
+                                </a>
+         
+                </div>
+            </section>
+        </div> <!-- cont end -->
+    
+                    {{/if}}
+                    {{/each}}
+            
+      
+
+    
+    
+    </div>
+

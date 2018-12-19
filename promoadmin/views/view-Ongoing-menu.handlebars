@@ -1,0 +1,162 @@
+<section class="content blog-page">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2><a href="/design/upload-Ongoing-menu">Upload Ongoing - Menu</a>
+                    <small>Welcome to Promoworks Application</small>
+                </h2>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+                <ul class="breadcrumb float-md-right">
+                    <li class="breadcrumb-item"><a href="/design/pick-seperate-menu-clients"><h2>View Seperate Clients
+                    <small>Welcome to Promoworks Application</small>
+                </h2></a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">  
+                                            {{#each Menu}}
+                                            {{#if Enable}}
+                                          {{#if Ongoing}}
+        <div class="col-lg-4 col-md-12 left-box">
+            <form method="post" action="/design/menu">
+                <div class="card single-blog-post">
+                    <div class="img-holder">
+                        <div class="img-post"> <iframe src ="https://works.promo.works{{this.menu_final_path}}" width="100%" height="700px" allowfullscreen ></iframe></div>
+                    </div>
+                    <div class="body">
+                        <ul class="meta list-inline">
+                            <li><a href="javascript:void(0);"><i class="zmdi zmdi-account col-blue"></i>Posted By: Promoworks</a></li>
+                            <li><a href="javascript:void(0);"><i class="zmdi zmdi-label col-lime"></i>Ongoing Menu Design</a></li>
+                        </ul>
+                        <h3 class="m-t-20"><a href="javascript:void(0);">{{this.brandtype}}</a></h3>
+                        <p>"↓" has been Showcased @ {{this.menu_date}}, {{this.menu_time}} to <b style="text-decoration:underline;">{{this.toWhom}}</b></p>
+                        <p>File Name :-  <b style="text-decoration:underline;">{{this.menu_file_name}}</b></p>
+                        
+                                                
+                            {{#if Seen}}
+                                <p class="text-center">Status :- <b style="text-decoration:underline;"> {{this.Seen}}</b></p>
+                            {{/if}}
+                        
+                        <div class="fine" style="display:grid;">
+                            
+                        <a href="#editMenu" data-toggle="modal" class="btn btn-raised btn-danger Menu" data-path="{{this._id}}">Delete</a>
+                        {{#if Enable}}
+                                <input type="text" value="{{this._id}}" name="yd" id="yd"  style="display:none;">
+                                <input type="text" value="Disable" name="disable" id="disable" style="display:none;">
+                         <button type="submit" name="submit" class="btn btn-raised btn-default">Move to Work history</button>
+                        {{/if}}      
+                        {{#if Disable}}
+                                <input type="text" value="{{this._id}}" name="yd" id="yd"  style="display:none;">
+                                <input type="text" value="Enable" name="enable" id="enable" style="display:none;">
+                        <button type="submit" name="submit" class="btn btn-raised btn-default">Am Absent</button>
+                        {{/if}}
+                       
+                        
+                         {{#if Ongoing}}  
+                        <a href="#moveMenu" data-toggle="modal" class="btn btn-raised btn-success  moveMenu" data-path="{{this._id}}">Move to Complete</a>
+                            {{/if}}   
+                          
+                        
+                                        {{#if Completed}}         
+                                                        
+                                                    {{/if}}
+                        
+         </div>
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                    </form>
+                  </div> 
+            
+                            {{/if}}
+                         {{/if}}
+            {{/each}}
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Move Size -->
+<div class="modal fade" id="moveMenu" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="defaultModalLabel">Are You Sure ?</h4>
+            </div>
+                                   	                <form class="form-horizontal row-border"  action ="/design/MoveMenu/" method="post" style="padding: 20px;">
+
+            <div class="modal-body"> 
+                        <div class="text-center">
+                            <img src="/images/avatar/move.gif" class="img-responsive" width="100%">
+                        </div>
+         
+                                            <input type="hidden" id="Ongoing" name="Ongoing" value="Ongoing" class="form-control">
+		                                      <input type="hidden" id="path" name="path" class="form-control">
+            
+  
+            
+            </div>
+            <div class="modal-footer">
+                <button type="submit" name="submit" class="btn btn-link waves-effect">MOVE</button>
+                <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">CLOSE</button>
+            </div>
+                </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Default Size -->
+<div class="modal fade" id="editMenu" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="defaultModalLabel">Are You Sure ?</h4>
+            </div>
+                                   	                <form class="form-horizontal row-border"  action ="/design/MenuBranding/" method="post" style="padding: 20px;">
+
+            <div class="modal-body"> 
+                        <div class="text-center">
+                            <img src="/images/avatar/xi.gif" class="img-responsive" width="100%">
+                        </div>
+		<input type="hidden" id="path" name="path"  class="form-control">
+
+            
+  
+            
+            </div>
+            <div class="modal-footer">
+                <button type="submit" name="submit" class="btn btn-link waves-effect">DELETE</button>
+                <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">CLOSE</button>
+            </div>
+                </form>
+
+        </div>
+    </div>
+</div>

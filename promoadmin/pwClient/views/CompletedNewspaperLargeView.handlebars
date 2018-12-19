@@ -1,0 +1,56 @@
+<header>
+    <a href="/home/home/{{user.username}}"><img src="/images/logo.jpg" alt="" class="img-responsive" width="50px" height="50px"></a>
+        <div class="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+<div class="wrapper">
+           <section class="titlebar">
+            <h1 class="page-title"><span>Completed </span>Newspaper Ads</h1>
+            <div id="particles-js"></div>
+        </section>
+        
+        <div class="cont">
+            <section class="portfolio-single type-2 top_90">
+                <div class="portfolio-images top_60 row">
+  {{#each CompletedNewspaper}}
+                    {{#if Completed}}
+
+                <figure class="col-md-12 bottom_30">
+                   <img src="{{this.newspaper_final_path}}" alt="{{this.newspaper_file_name}}" id="image" name="image">
+                    </figure>
+                    
+                                                                        <div class="col-md-10 left-list">
+                                    <small>{{this.Adtype}}</small>
+                                    <h4 class="title">{{this._id}}</h4>
+                                                                            <p>{{this.newspaper_file_name}}</p>
+                                    <div class="information">Uploaded @ <span>{{this.newspaper_date}}</span>&nbsp; &nbsp;<span>{{this.newspaper_time}}</span></div>
+                                </div>
+                    
+                           
+                <div class="col-md-12">
+                    <a class="btn" href="{{this.newspaper_final_path}}" download style="width:100%;background:#1bafff;color: #fff;padding: 12px 12px;" type="submit" target="_blank" rel="noopener">
+                        <i class="fa fa-download"></i> Download</a>
+                </div>
+                        
+                    
+                    <div class="leave-reply top_90 container"></div>
+                    {{/if}}
+                    {{/each}}
+                </div>
+            </section>
+
+        </div> <!-- cont end -->
+    
+    
+
+ 
+    
+
+    
+    
+    </div>
+

@@ -1,0 +1,49 @@
+<section class="content home">
+    <div class="block-header">
+        <div class="row clearfix">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>Client's Login <small>Login Preformance / Daily Status</small> </h2>
+          
+                    </div>
+                    <div class="body table-responsive members_profiles">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                                <th>Client ID</th>
+                                                <th>Username</th>
+                                                <th>Current Date</th>
+                                                <th>Current Time</th>
+                                                <th>Delivery</th>
+                                                <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                       {{#each Seen}}
+                                            <tr>
+                                                <td>{{this._id}}</td>
+                                                <td>{{this.username}}</td>
+                                                <td class="color-success">{{this.seen_date}}</td>
+                                                <td class="color-success">{{this.seen_time}}</td>
+                                                <td><span class="btn btn-success">Seen</span></td>
+                                                <td><a href="/home/deleteSeen/{{this._id}}"><span class="zmdi zmdi-delete" type="button" title="Delete"></span></a></td>  
+                                            </tr>
+                                            {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>       
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="body">
+                        <p class="m-b-0">© 2018 Pw Admin by <a href="http://promo.works/" target="black">Promoworks</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

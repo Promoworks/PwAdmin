@@ -1,0 +1,77 @@
+<section class="content blog-page">
+    <div class="block-header">
+        <div class="row">
+
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">  
+            
+                   {{#each MagazineCommentsSection}}
+        <div class="col-lg-4 col-md-12 left-box">
+            <form method="post" action="/Comments/post-Ongoing-magazine-Comments/{{this._id}}">
+                <div class="card single-blog-post">
+             
+                    <div class="body">
+                             <h4>Posted By {{this.username}}</h4>
+                        
+                            <div class="form-group">
+                                    <div class="form-line">
+                                        <label>Posted @ {{this.commentDate}} </label>
+                                        <input type="text" id="example-email" class="form-control" placeholder="Email" name="example-email" type="text" value="{{this.message}}" disabled />
+                                    </div>
+                                </div>
+                                             
+                        
+                            <div class="form-group">
+                                    <div class="form-line">
+                                                {{#if MagazineCommentsSection.AdminComments}}
+                                                    <label>Your Comments will be displayed Here </label>
+                                                {{else}}
+                                                    <label>Admin Posted @ {{this.AdminDate}} </label>
+                                                    <input class="form-control" placeholder="Give Your text Here" value="{{this.AdminComments}}" disabled type="text">
+                                                {{/if}}
+                                    </div>
+                                </div>
+                                                             
+                        
+                            <div class="form-group">
+                                    <div class="form-line">
+                                        <label>Reply From {{user.username}} </label>
+                                        <input type="text" id="adminComments" class="form-control" placeholder="Give Your text Here" name="adminComments"/>
+                                    </div>
+                                </div>
+                        
+                                            <button type="submit" name="submit" class="btn btn-success">Post Comments</button>
+                                            <a href="/Comments/deleteComments/{{this._id}}"><span class="btn btn-danger">Delete Comments</span></a>
+                        
+                        
+                    </div>
+                </div>
+                    </form>
+                  </div> 
+            
+                  
+            {{/each}}
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

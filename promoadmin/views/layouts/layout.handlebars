@@ -1,0 +1,448 @@
+<html class="no-js " lang="en">
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="description" content="">
+
+    <title>:: Promoworks :: Sign In</title>
+    <!-- Favicon-->
+<!--    <link rel="icon" href="favicon.ico" type="image/x-icon">-->
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/authentication.css">
+    <link rel="stylesheet" href="/css/color_skins.css">
+    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/css/dropzone.css">
+    <link rel="stylesheet" href="/css/waitMe.css">
+    <link rel="stylesheet" href="/css/bootstrap-select.css">
+    <link rel="stylesheet" href="/css/bootstrap-material-datetimepicker.css">
+    <link rel="stylesheet" href="/css/dataTables.bootstrap4.min.css">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.3.7/plyr.css" rel="stylesheet">
+</head>
+        
+        
+
+<body>
+            {{#if user}}
+    
+<nav class="navbar">
+    <div class="col-12">
+        
+        <div class="navbar-header">
+            <a href="javascript:void(0);" class="bars"></a>
+            <a class="navbar-brand" href="/home/home/{{user.username}}">Promoworks</a>
+        </div>
+        <ul class="nav navbar-nav navbar-left">
+            <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
+
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+  
+      <li class="dropdown"> <a href="/password/get-password/{{user._id}}/change"><i class="zmdi zmdi-key"></i>
+                <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
+                </a>
+
+            </li>
+            <li>
+                <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true">
+                    <i class="zmdi zmdi-fullscreen"></i>                   
+                </a>
+            </li>
+            <li><a href="/logout/{{user._id}}" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a></li>
+        </ul>
+    </div>
+</nav>
+<!-- Left Sidebar -->
+<aside id="leftsidebar" class="sidebar">
+    <!-- User Info -->
+    <div class="user-info">
+        <div class="image">
+            <img src="/images/Twiter.jpg" alt="Promoworks" width="48" height="48" alt="User" />
+        </div>
+        <div class="info-container">
+            <div class="name" data-toggle="dropdown">{{user.username}}</div>
+            <div class="btn-group user-helper-dropdown">
+                <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button"> keyboard_arrow_down </i>
+                <ul class="dropdown-menu slideUp">
+                    <li><a href="/profile/profile-view/{{user.username}}"><i class="material-icons">person</i>Profile</a></li>
+<!--                    <li><a href="/profile/RegProfile"><i class="material-icons">person</i>Add Profile</a></li>-->
+                    <li class="divider"></li>
+                    <li><a href="/logout/{{user._id}}"><i class="material-icons">input</i>Sign Out</a></li>
+                </ul>
+            </div>
+            <div class="email">{{user.email}}</div>
+        </div>
+    </div>
+    <!-- #User Info --> 
+    <!-- Menu -->
+    <div class="menu">
+        <ul class="list">
+            <li class="header">MAIN NAVIGATION</li>
+            <li class="active open"> <a href="/home/home/{{user.username}}"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+            
+             <li class="header">CLIENTS</li>
+            <li> <a href="/clients/createClients"><i class="zmdi zmdi-home"></i><span>Create Clients</span></a></li>
+            <li> <a href="/clients/viewClients"><i class="zmdi zmdi-home"></i><span>View Clients</span></a></li>
+      
+            
+                        <li class="header">BRANDING</li>
+
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-brush"></i><span>Ongoing Design</span> </a>
+                <ul class="ml-menu">
+                    
+                            <li><a href="/design/view-Ongoing-logo">Logo Design</a></li>
+                            <li><a href="/design/view-Ongoing-stationery">Stationery Design</a></li>
+                            <li><a href="/design/view-Ongoing-brochure">Brochure Design</a></li>
+                            <li><a href="/design/view-Ongoing-menu">Menu Card Design</a></li>
+                            <li><a href="/design/view-Ongoing-landing">Landing Page Design</a></li>
+                            <li><a href="/design/view-Ongoing-package">Package Design</a></li>
+                            <li><a href="/design/view-Ongoing-banner">Banner Design</a></li>
+                            <li><a href="/design/view-Ongoing-shirt">T-Shirt Design</a></li>
+                            <li><a href="/design/view-Ongoing-shop">In-Shop Design</a></li>
+                            <li><a href="/design/view-Ongoing-hoarding">Hoarding Design</a></li>
+
+                </ul>
+            </li>            
+      
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-brush"></i><span>Completed Design</span> </a>
+                <ul class="ml-menu">
+                    
+                            <li><a href="/CompletedDesign/view-Completed-logo">Logo Design</a></li>
+                            <li><a href="/CompletedDesign/view-Completed-stationery">Stationery Design</a></li>
+                            <li><a href="/CompletedDesign/view-Completed-brochure">Brochure Design</a></li>
+                            <li><a href="/CompletedDesign/view-Completed-menu">Menu Card Design</a></li>
+                            <li><a href="/CompletedDesign/view-Completed-landing">Landing Page Design</a></li>
+                            <li><a href="/CompletedDesign/view-Completed-package">Package Design</a></li>
+                            <li><a href="/CompletedDesign/view-Completed-banner">Banner Design</a></li>
+                            <li><a href="/CompletedDesign/view-Completed-shirt">T-Shirt Design</a></li>
+                            <li><a href="/CompletedDesign/view-Completed-shop">In-Shop Design</a></li>
+                            <li><a href="/CompletedDesign/view-Completed-hoarding">Hoarding Design</a></li>
+
+                </ul>
+            </li>
+            
+            
+                  
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-brush"></i><span>Disabled Design</span> </a>
+                <ul class="ml-menu">
+                    
+                            <li><a href="/Disable/pick-seperate-disable-logo-clients">Logo Design</a></li>
+                            <li><a href="/Disable/pick-seperate-disable-stationery-clients">Stationery Design</a></li>
+                            <li><a href="/Disable/pick-seperate-disable-brochure-clients">Brochure Design</a></li>
+                            <li><a href="/Disable/pick-seperate-disable-menu-clients">Menu Card Design</a></li>
+                            <li><a href="/Disable/pick-seperate-disable-landing-clients">Landing Page Design</a></li>
+                            <li><a href="/Disable/pick-seperate-disable-package-clients">Package Design</a></li>
+                            <li><a href="/Disable/pick-seperate-disable-banner-clients">Banner Design</a></li>
+                            <li><a href="/Disable/pick-seperate-disable-shirt-clients">T-Shirt Design</a></li>
+                            <li><a href="/Disable/pick-seperate-disable-shop-clients">In-Shop Design</a></li>
+                            <li><a href="/Disable/pick-seperate-disable-hoarding-clients">Hoarding Design</a></li>
+
+                </ul>
+            </li>
+            
+            
+                        
+                  
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-brush"></i><span>Comments</span> </a>
+                <ul class="ml-menu">
+                    
+                            <li><a href="/Comments/pickClient-Ongoing-logo-Comments">Logo Comments</a></li>
+                            <li><a href="/Comments/pickClient-Ongoing-stationery-Comments">Stationery Comments</a></li>
+                            <li><a href="/Comments/pickClient-Ongoing-brochure-Comments">Brochure Comments</a></li>
+                            <li><a href="/Comments/pickClient-Ongoing-menu-Comments">Menu Card Comments</a></li>
+                            <li><a href="/Comments/pickClient-Ongoing-landing-Comments">Landing Page Comments</a></li>
+                            <li><a href="/Comments/pickClient-Ongoing-package-Comments">Package Comments</a></li>
+                            <li><a href="/Comments/pickClient-Ongoing-banner-Comments">Banner Comments</a></li>
+                            <li><a href="/Comments/pickClient-Ongoing-shirt-Comments">T-Shirt Comments</a></li>
+                            <li><a href="/Comments/pickClient-Ongoing-shop-Comments">In-Shop Comments</a></li>
+                            <li><a href="/Comments/pickClient-Ongoing-hoarding-Comments">Hoarding Comments</a></li>
+
+                </ul>
+            </li>
+            
+            
+                  <li class="header">VIDEOS</li>
+            
+            
+            
+            
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-airplay"></i><span>Ongoing Videos</span> </a>
+                <ul class="ml-menu">
+                            <li><a href="/videos/view-Ongoing-2d">2d - Videos</a></li>
+                            <li><a href="/videos/view-Ongoing-3d">3d - Videos</a></li>
+                            <li><a href="/videos/view-Ongoing-explainer">Explainer Videos</a></li>
+                            <li><a href="/videos/view-Ongoing-greeting">Greeting Videos</a></li>
+                            <li><a href="/videos/view-Ongoing-promotional">Promotional Videos</a></li>
+                            <li><a href="/videos/view-Ongoing-scribe">Scribe Videos</a></li>
+                            <li><a href="/videos/view-Ongoing-voice">Voice Over</a></li>
+                </ul>
+            </li>
+
+            
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-airplay"></i><span>Completed Videos</span> </a>
+                <ul class="ml-menu">
+                            <li><a href="/CompletedVideos/view-Completed-2D">2d - Videos</a></li>
+                            <li><a href="/CompletedVideos/view-Completed-3d">3d - Videos</a></li>
+                            <li><a href="/CompletedVideos/view-Completed-explainer">Explainer Videos</a></li>
+                            <li><a href="/CompletedVideos/view-Completed-greeting">Greeting Videos</a></li>
+                            <li><a href="/CompletedVideos/view-Completed-promotional">Promotional Videos</a></li>
+                            <li><a href="/CompletedVideos/view-Completed-scribe">Scribe Videos</a></li>
+                            <li><a href="/CompletedVideos/view-Completed-voice">Voice Over</a></li>
+                </ul>
+            </li>
+            
+            
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-airplay"></i><span>Disabled Videos</span> </a>
+                <ul class="ml-menu">
+                            <li><a href="/Disable/pick-seperate-disable-2d-clients">2d - Videos</a></li>
+                            <li><a href="/Disable/pick-seperate-3d-disable-clients">3d - Videos</a></li>
+                            <li><a href="/Disable/pick-seperate-disable-explainer-clients">Explainer Videos</a></li>
+                            <li><a href="/Disable/pick-seperate-greeting-disable-clients">Greeting Videos</a></li>
+                            <li><a href="/Disable/pick-seperate-disable-promotional-clients">Promotional Videos</a></li>
+                            <li><a href="/Disable/pick-seperate-disable-scribe-clients">Scribe Videos</a></li>
+                            <li><a href="/Disable/pick-seperate-voice-disable-clients">Voice Over</a></li>
+                </ul>
+            </li>
+            
+                        
+            
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-airplay"></i><span>Comments</span> </a>
+                <ul class="ml-menu">
+                            <li><a href="/Comments/pickClient-Ongoing-twod-Comments">2d - Videos</a></li>
+                            <li><a href="/Comments/pickClient-Ongoing-threed-Comments">3d - Videos</a></li>
+                            <li><a href="/Comments/pickClient-Ongoing-explainer-Comments">Explainer Videos</a></li>
+                            <li><a href="/Comments/pickClient-Ongoing-greeting-Comments">Greeting Videos</a></li>
+                            <li><a href="/Comments/pickClient-Ongoing-promotional-Comments">Promotional Videos</a></li>
+                            <li><a href="/Comments/pickClient-Ongoing-scribe-Comments">Scribe Videos</a></li>
+                            <li><a href="/Comments/pickClient-Ongoing-voice-Comments">Voice Over</a></li>
+                </ul>
+            </li>
+            
+            
+            
+            
+                             <li class="header">ADS</li>
+ 
+
+            
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-label"></i><span>Ongoing Ads</span> </a>
+                <ul class="ml-menu">
+                            <li><a href="/ads/view-Ongoing-newspaper">Newspaper Ads</a></li>
+                            <li><a href="/ads/view-Ongoing-magazine">Magazine Ads</a></li>
+                            <li><a href="/ads/view-Ongoing-theatre">Theatre Ads</a></li>
+                            <li><a href="/ads/view-Ongoing-tv">Tv Ads</a></li>
+                            <li><a href="/ads/view-Ongoing-digital">Digital Ads</a></li>
+                </ul>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-label"></i><span>Completed Ads</span> </a>
+                <ul class="ml-menu">
+                            <li><a href="/CompletedAds/view-Completed-newspaper">Newspaper Ads</a></li>
+                            <li><a href="/CompletedAds/view-Completed-magazine">Magazine Ads</a></li>
+                            <li><a href="/CompletedAds/view-Completed-theatre">Theatre Ads</a></li>
+                            <li><a href="/CompletedAds/view-Completed-tv">Tv Ads</a></li>
+                            <li><a href="/CompletedAds/view-Completed-digital">Digital Ads</a></li>
+                </ul>
+            </li>
+                        
+            
+            
+            
+            
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-label"></i><span>Disabled Ads</span> </a>
+                <ul class="ml-menu">
+                            <li><a href="/Disable/pick-seperate-disable-newspaper-clients">Newspaper Ads</a></li>
+                            <li><a href="/Disable/pick-seperate-disable-magazine-clients">Magazine Ads</a></li>
+                            <li><a href="/Disable/pick-seperate-disable-theatre-clients">Theatre Ads</a></li>
+                            <li><a href="/Disable/pick-seperate-disable-tv-clients">Tv Ads</a></li>
+                            <li><a href="/Disable/pick-seperate-disable-digital-clients">Digital Ads</a></li>
+                </ul>
+            </li>
+            
+                        
+            
+            
+            
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-label"></i><span>Comments Ads</span> </a>
+                <ul class="ml-menu">
+                            <li><a href="/Comments/pickClient-Ongoing-newspaper-Comments">Newspaper Ads</a></li>
+                            <li><a href="/Comments/pickClient-Ongoing-magazine-Comments">Magazine Ads</a></li>
+                            <li><a href="/Comments/pickClient-Ongoing-theatre-Comments">Theatre Ads</a></li>
+                            <li><a href="/Comments/pickClient-Ongoing-tv-Comments">Tv Ads</a></li>
+                            <li><a href="/Comments/pickClient-Ongoing-digital-Comments">Digital Ads</a></li>
+                </ul>
+            </li>
+            
+            
+            
+                   <li class="header">MISCELLANEOUS</li>
+            
+
+            <li> <a href="/Miscellaneous/view-Ongoing-miscellaneous"><i class="zmdi zmdi-layers"></i><span>Ongoing Miscellaneous</span> </a> </li>
+            <li> <a href="/CompletedMiscellaneous/view-Completed-miscellaneous"><i class="zmdi zmdi-layers"></i><span>Completed Miscellaneous</span> </a> </li>
+            <li> <a href="/Disable/pick-seperate-disable-miscellaneous-clients"><i class="zmdi zmdi-layers"></i><span>Disabled Miscellaneous</span> </a> </li>
+            <li> <a href="/Comments/pickClient-Ongoing-miscellaneous-Comments"><i class="zmdi zmdi-layers"></i><span>Comments Miscellaneous</span> </a> </li>
+            
+            
+                        
+            
+                   <li class="header">GIF</li>
+            
+
+            <li> <a href="/Gif/view-Ongoing-gif"><i class="zmdi zmdi-layers"></i><span>Ongoing Gif</span> </a> </li>
+            <li> <a href="/CompletedGif/view-Completed-gif"><i class="zmdi zmdi-layers"></i><span>Completed Gif</span> </a> </li>
+            <li> <a href="/Disable/pick-seperate-disable-gif-clients"><i class="zmdi zmdi-layers"></i><span>Disabled Gif</span> </a> </li>
+            <li> <a href="/Comments/pickClient-Ongoing-gif-Comments"><i class="zmdi zmdi-layers"></i><span>Comments Gif</span> </a> </li>
+            
+            
+            
+                   <li class="header">SCRIPTS</li>
+            
+
+            <li> <a href="/Scripts/view-Ongoing-scripts"><i class="zmdi zmdi-spellcheck"></i><span>Ongoing Scripts</span> </a> </li>
+            <li> <a href="/CompletedScripts/view-Completed-scripts"><i class="zmdi zmdi-spellcheck"></i><span>Completed Scripts</span> </a> </li>
+            <li> <a href="/Disable/pick-seperate-disable-scripts-clients"><i class="zmdi zmdi-spellcheck"></i><span>Disabled Scripts</span> </a> </li>
+            <li> <a href="/Comments/pickClient-Ongoing-scripts-Comments"><i class="zmdi zmdi-spellcheck"></i><span>Comments Scripts</span> </a> </li>
+            
+                    <li class="header">STATS</li>
+            <li> <a href="/Stats/view-stats" target="_blank" rel="noopener"><i class="zmdi zmdi-code"></i><span>Analytics</span> </a> </li>   
+            
+                        
+                    <li class="header">HIT THE SITE</li>
+            <li> <a href="http://works.promo.works" target="_blank" rel="noopener"><i class="zmdi zmdi-code"></i><span>works.promo.works</span> </a> </li>   
+            
+
+                    <li class="header">LOGOUT</li>
+            <li> <a href="/logout/{{user._id}}"><i class="zmdi zmdi-key"></i><span>Logout</span> </a> </li>
+
+        </ul>
+    </div>
+    <!-- #Menu --> 
+</aside>    
+<!-- Right Sidebar -->
+
+<!-- Chat-launcher -->
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+            {{/if}}
+    
+
+            
+
+    
+{{{body}}}
+
+
+    
+    <!-- Jquery Core Js -->
+<script src="/js/libscripts.bundle.js"></script>    
+<script src="/js/vendorscripts.bundle.js"></script>
+<!--<script src="/js/jvectormap.bundle.js"></script> -->
+<script src="/js/morrisscripts.bundle.js"></script><!-- Morris Plugin Js -->
+<script src="/js/sparkline.bundle.js"></script> <!-- Sparkline Plugin Js -->
+<script src="/js/knob.bundle.js"></script> <!-- Jquery Knob Plugin Js -->
+<script src="/js/mainscripts.bundle.js"></script>
+<script src="/js/index.js"></script>
+<script src="/js/jquery-knob.min.js"></script>
+<script src="/js/sparkline.js"></script> 
+<script src="/js/dropzone.js"></script> <!-- Dropzone Plugin Js --> 
+<script src="/js/basic-form-elements.js"></script> <!-- Dropzone Plugin Js --> 
+<script src="/js/autosize.js"></script> <!-- Dropzone Plugin Js --> 
+<script src="/js/moment.js"></script> <!-- Dropzone Plugin Js --> 
+<script src="/js/deletion.js"></script>
+    
+    
+<script src="/js/datatablescripts.bundle.js"></script>
+<script src="/js/dataTables.buttons.min.js"></script>
+<script src="/js/buttons.bootstrap4.min.js"></script>
+<script src="/js/buttons.colVis.min.js"></script>
+<script src="/js/buttons.flash.min.js"></script>
+<script src="/js/buttons.html5.min.js"></script>
+<script src="/js/buttons.print.min.js"></script>
+<script src="/js/jquery-datatable.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+
+    
+    
+<script src="/js/bootstrap-material-datetimepicker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.3.7/plyr.min.js"></script>
+
+    
+    
+    <script>
+        const players = Array.from(document.querySelectorAll('.js-player')).map(p => new Plyr(p))
+
+    </script>
+
+
+<script>
+var ctx = document.getElementById("myChart").getContext("2d");
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["january", "feburary", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        },
+        title:{
+            display:'true',
+            text:'Clients Login Details',
+            fontSize:25
+        },
+        legend:{
+            display:true
+        }
+
+    }
+});
+</script>
+</body>
+
+</html>

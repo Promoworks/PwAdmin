@@ -1,0 +1,79 @@
+<style>
+    .navbar{
+            display:none !important;
+    }
+    #leftsidebar
+    {
+        display:none !important;
+    }
+</style>
+
+
+<div class="authentication">
+    <div class="card">
+        <div class="body">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header slideDown">
+                        <div class="logo"><img src="/images/Twiter.jpg" alt="Promoworks" width="15%;"></div>
+                        <h1>PW - OTP</h1>
+                        <ul class="list-unstyled l-social">
+                            <li><a href="https://www.facebook.com/PromoWorksOfficial/"><i class="zmdi zmdi-facebook-box"></i></a></li>
+                            <li><a href="https://www.pinterest.com/promoworkslive/"><i class="zmdi zmdi-pinterest-box"></i></a></li>                            
+                            <li><a href="https://twitter.com/promoworkslive"><i class="zmdi zmdi-twitter"></i></a></li>
+                        </ul>
+                    </div>                        
+                </div>
+                <div class="col-md-12">
+                    
+                    
+              {{#if success_msg}}
+                <div class="alert alert-success text-center">{{success_msg}}</div>
+              {{/if}}
+
+              {{#if error_msg}}
+                <div class="alert alert-danger text-center">{{error_msg}}</div>
+              {{/if}}
+
+              {{#if error}}
+                <div class="alert alert-danger text-center">{{error}}</div>
+              {{/if}}
+                    
+                    
+                    <div class="thumb">
+                        <img class="rounded-circle" src="assets/images/xs/avatar1.jpg" alt="">
+                        <h4 class="m-b-0 m-t-10">{{user.username}}</h4>
+                    </div>                    
+                </div>
+                <form class="col-lg-12" action ="/two-factor/" method="post" >
+                    <h5 class="title">OTP</h5>
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <input type="password" placeholder="Enter OTP" name="otp" id="otp" autocomplete="off" class="form-control">
+                        </div>  
+                        <div class="form-line hidden">
+                            <input type="text" class="form-control" value="{{decryptedString}}" name="Dupkey" id="Dupkey" autocomplete="off">
+                        </div>           
+  
+                    </div>  
+                            
+                <div class="col-lg-12">
+                    <button type="submit" name="submit" class="btn btn-raised btn-primary waves-effect block">Here we go.. </button>
+<!--                    <a href="index.html" class="btn btn-raised btn-primary waves-effect">Login</a>-->
+                </div>
+                    
+                </form>
+
+<!--
+                <div class="col-lg-12 m-t-20">
+                    <a href="/" title="">Didn't receive Code</a>
+                </div>
+-->
+                
+                <div class="col-lg-12 m-t-20">
+                    <a href="/" title="">Sign In!</a>
+                </div>                    
+            </div>
+        </div>
+    </div>
+</div>

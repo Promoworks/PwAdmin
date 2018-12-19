@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+
+    <title>Promoworks : Clients</title>
+	
+	<!-- ================= Favicon ================== -->
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/cubeportfolio.min.css"/>
+    <link rel="stylesheet" href="/css/owl.theme.css"/> 
+    <link rel="stylesheet" href="/css/owl.carousel.css"/> 
+    <link rel="stylesheet" href="/css/red.css"/>
+	<link rel="stylesheet" href="/css/style.css"/>
+    
+    <!-- Google Web fonts -->
+<!--    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Merienda:400,500,600,700,800" rel="stylesheet">
+    
+    <!-- Font icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/css/flaticon.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.3.7/plyr.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tether-tooltip/1.2.0/css/tooltip-theme-arrows.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+ 
+    
+
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+    </div>
+
+    {{#if user}}
+  
+        <div class="full-menu">
+        <div class="full-inner row">
+            <nav class="col-md-8">
+                <ul>
+                    <li><a href="/home/ClientProfile/">My Account</a></li>
+                    <li><a href="/progress/progressor/">Work in Progress</a></li>
+                    <li><a href="/Completed/finished">Completed</a></li>
+                    <li><a href="/History/workHistory">Work History</a></li>
+                    <li><a href="/password/get-password/{{user._id}}/change">Change Password</a></li>
+                    <li><a href="/logout">Log out</a></li>
+                </ul>
+            </nav>
+            <div class="col-md-4 full-contact">
+                <ul>
+                    <li class="title">Get in Touch</li>
+                    <li>hello@promo.works</li>
+                    <li>
+                        <div class="social">
+                            <a href="https://www.facebook.com/PromoWorksOfficial/"><i class="fa fa-facebook"></i>  </a>
+                            <a href="https://twitter.com/promoworkslive"><i class="fa fa-twitter" aria-hidden="true"></i>  </a>
+                            <a href="https://www.instagram.com/promoworksofficial/"><i class="fa fa-instagram" aria-hidden="true"></i>  </a>
+                            <a href="https://www.pinterest.com/promoworkslive/"><i class="fa fa-pinterest" aria-hidden="true"></i>  </a>
+                            <a href="https://www.youtube.com/channel/UCj7N5iKpYVofrV63tqP2hjg"><i class="fa fa-youtube" aria-hidden="true"></i>  </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    {{/if}}
+
+    
+{{{body}}}
+    
+    
+    <footer>
+       <div class="cont">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12 copyright">
+                    <img src="/images/logo.png" alt="">
+                    <p>© 2018 Promoworks</p>
+                </div>
+                <div class="col-md-4 d-sm-none d-md-block">
+                        <div class="social">
+                            <a href="https://www.facebook.com/PromoWorksOfficial/"><i class="fa fa-facebook"></i>  </a>
+                            <a href="https://twitter.com/promoworkslive"><i class="fa fa-twitter" aria-hidden="true"></i>  </a>
+                            <a href="https://www.instagram.com/promoworksofficial/"><i class="fa fa-instagram" aria-hidden="true"></i>  </a>
+                            <a href="https://www.pinterest.com/promoworkslive/"><i class="fa fa-pinterest" aria-hidden="true"></i>  </a>
+                            <a href="https://www.youtube.com/channel/UCj7N5iKpYVofrV63tqP2hjg"><i class="fa fa-youtube" aria-hidden="true"></i>  </a>
+                        </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 d-none d-sm-block getintouch">
+                    <a href="#">
+                        <strong>Get In Touch</strong><br>
+                        <p>hello@promo.works</p>
+                    </a>
+                </div>
+            </div>
+       </div>
+    </footer>
+
+    <!-- Javascripts -->
+    <script src="/js/jquery-2.1.4.min.js"></script>    
+    <script src="/js/jquery.cubeportfolio.min.js"></script>
+    <script src="/js/typed.js"></script>
+    <script src="/js/particles.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/jquery.hover3d.js"></script>
+    <script src="/js/tweetie.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/main.js"></script>
+  
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.3.7/plyr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether-tooltip/1.2.0/js/tooltip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+
+
+    
+    <script>
+//    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    </script>
+        <script>
+        const players = Array.from(document.querySelectorAll('.js-player')).map(p => new Plyr(p));
+    </script>
+    
+    <script>
+new ClipboardJS('.btn');
+</script>
+    <script>
+    
+    $(document).on("click", "a.btnnnn", function () {
+    $.fileDownload($(this).prop('href'), {
+        preparingMessageHtml: "We are preparing your report, please wait...",
+        failMessageHtml: "There was a problem generating your report, please try again."
+    });
+    return false; //this is critical to stop the click event which will trigger a normal file download!
+});
+    </script>
+</body>
+
+</html>

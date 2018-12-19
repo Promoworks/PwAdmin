@@ -1,0 +1,32 @@
+var mongoose = require('mongoose');
+var bcrypt = require('bcryptjs');
+
+
+// TvCommentsSection Image Schema
+var TvCommentsSectionSchema = mongoose.Schema({
+    sub_id: String,
+	message: String,
+	username: String,
+    brand:String,
+	commentDate: String,
+	commentTime: String,
+    delStatus : String,
+    AdminName : String,
+    AdminComments : String,
+    AdminDate : String,
+    AdminTime : String,
+    tv_id : String,
+    Companylogo_final_path: String
+
+
+},	
+     { collection: 'TvCommentsSection'});
+
+
+
+var TvCommentsSection = module.exports = mongoose.model('TvCommentsSection', TvCommentsSectionSchema);
+module.exports.createTvCommentsSection = function(newTvCommentsSection, callback)
+{
+    
+        newTvCommentsSection.save(callback);
+}

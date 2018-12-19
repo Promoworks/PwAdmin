@@ -1,0 +1,97 @@
+<section class="content blog-page">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2><a href="/CompletedAds/upload-Completed-digital">Upload Completed - Digital Ads</a>
+                    <small>Welcome to Promoworks Application</small>
+                </h2>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">  
+                                            {{#each Digital}}
+                                          {{#if Completed}}
+        <div class="col-lg-4 col-md-12 left-box">
+                <div class="card single-blog-post">
+                    <div class="img-holder">
+                       <div class="img-post"><img src="https://works.promo.works{{this.digital_final_path}}" alt="Promoworks" class="img-responsive" width="100%"></div>
+                    </div>
+                    <div class="body">
+                        <ul class="meta list-inline">
+                            <li><a href="javascript:void(0);"><i class="zmdi zmdi-account col-blue"></i>Posted By: Promoworks</a></li>
+                            <li><a href="javascript:void(0);"><i class="zmdi zmdi-label col-lime"></i>Completed Digital Ads</a></li>
+                        </ul>
+                        <h3 class="m-t-20"><a href="javascript:void(0);">{{this.Adtype}}</a></h3>
+                        <p>"↓" has been Showcased @ {{this.digital_date}}, {{this.digital_time}} to <b style="text-decoration:underline;">{{this.toWhom}}</b></p>
+                        <p>File Name :-  <b style="text-decoration:underline;">{{this.digital_file_name}}</b></p>
+                        
+                                                
+                            {{#if Downloaded}}
+                                <p class="text-center">Status :- <b style="text-decoration:underline;"> {{this.Downloaded}}</b></p>
+                            {{/if}}
+                        
+                        <div class="fine" style="display:grid;">
+                            
+                        <a href="#editDigital" data-toggle="modal" class="btn btn-raised btn-danger Digital" data-path="{{this._id}}">Delete</a>
+     
+                        
+                        
+         </div>
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                  </div> 
+            
+                         {{/if}}
+            {{/each}}
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Default Size -->
+<div class="modal fade" id="editDigital" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="defaultModalLabel">Are You Sure ?</h4>
+            </div>
+                                   	                <form class="form-horizontal row-border"  action ="/CompletedAds/CompletedDigital/" method="post" style="padding: 20px;">
+
+            <div class="modal-body"> 
+                        <div class="text-center">
+                            <img src="/images/avatar/xi.gif" class="img-responsive" width="100%">
+                        </div>
+		<input type="hidden" id="path" name="path"  class="form-control">
+
+            
+  
+            
+            </div>
+            <div class="modal-footer">
+                <button type="submit" name="submit" class="btn btn-link waves-effect">DELETE</button>
+                <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">CLOSE</button>
+            </div>
+                </form>
+
+        </div>
+    </div>
+</div>

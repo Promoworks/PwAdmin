@@ -1,0 +1,63 @@
+
+<header>
+    <a href="/home/home/{{user.username}}"><img src="/images/logo.jpg" alt="" class="img-responsive" width="50px" height="50px"></a>
+        <div class="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+<div class="wrapper">
+           <section class="titlebar">
+            <h1 class="page-title"><span>Completed Logo </span>Designs</h1>
+            <div id="particles-js"></div>
+        </section>
+    
+        <div class="cont">
+            <section class="portfolio-single type-2 top_90">
+
+                <div class="portfolio-images top_60 row">
+  {{#each CompletedLogo}}
+                    {{#if Completed}}
+
+                    <figure class="col-md-12 bottom_30">
+                        <img src="{{this.logo_final_path}}" alt="{{this.logo_file_name}}" id="image" name="image">
+
+
+                    </figure>
+                                        
+                                <div class="col-md-10 left-list">
+                                    <h4 class="title">{{this._id}}</h4>
+                                    <small>{{this.brandtype}}</small><br/>
+                                     <p>{{this.logo_file_name}}</p>
+                                    <div class="information">Uploaded @ <span>{{this.logo_date}}</span>&nbsp; &nbsp;<span>{{this.logo_time}}</span></div>
+                                </div>
+                    
+                    
+
+    <a class="btn" href="{{this.logo_final_path}}" download style="width:100%;background:#1bafff;color: #fff;padding: 12px 12px;" target="_blank" rel="nofollow"><i class="fa fa-download"></i> Download</a>  
+
+                    <div class="leave-reply top_90 container"></div>
+                    {{/if}}
+                    {{/each}}
+
+                  
+                </div>
+
+
+            </section>
+
+        </div> <!-- cont end -->
+    
+    
+
+        
+        
+    
+    
+
+    
+    
+    </div>
+

@@ -1,0 +1,58 @@
+
+<header>
+    <a href="/home/home/{{user.username}}"> <img src="/images/logo.jpg" alt="" class="img-responsive" width="50px" height="50px"></a>
+        <div class="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+<div class="wrapper">
+                   <section class="titlebar">
+            <h1 class="page-title"><span>Ongoing </span>Scribe Videos</h1>
+            <div id="particles-js"></div>
+        </section>
+    
+  
+    
+      {{#each OngoingScribe}}
+     {{#if Ongoing}}
+                    
+            <div class="cont bg-space">
+            <section class="portfolio-single type-2 top_90">
+
+                <div class="portfolio-images top_60 row">
+
+                                                                                {{#if Enable}}
+                        <a href="/progress/OngoingScribeLargeView/{{this._id}}/{{this.toWhom}}" class="col-md-12 news-list bottom_60">
+                            <article class="news-box row">
+                                <figure class="col-md-10">
+                            <video src="{{this.scribe_final_path}}" class="js-player" controls ></video>
+                                </figure>
+                                <div class="col-md-10 left-list">
+                                    <small>{{this.videotype}}</small>
+                                    <h4 class="title">{{this._id}}</h4>
+                                    <p>Click Here to View Enlarge ...</p>
+                                    <div class="information">{{this.owner}}, &nbsp; &nbsp;<span>{{this.scribe_date}}</span>&nbsp; &nbsp;<span>{{this.scribe_time}}</span></div>
+                                </div>
+                            </article>
+                        </a>
+                        {{/if}}
+
+                </div>
+          
+                    {{/if}}
+                    {{/each}}
+                
+            </section>
+
+        </div> 
+    
+
+          <div class="text-center">
+                        
+                                <a href="/progress/OngoingGiveMeAComment-Scribe/{{user._id}}/{{user.username}}" class="text-center">Click here Leave a Reply</a>
+            </div>
+    
+            </div>

@@ -1,0 +1,86 @@
+<style>
+
+@media only screen and (max-width:1399px)
+{
+    .hidden-xs
+    {
+        display:none;
+    }
+     
+
+    
+}
+    .wrapper
+    {
+        padding-bottom:0px !important;
+    }
+        footer
+    {
+        display:none !important;
+    }
+    
+    body
+    {
+        padding-bottom: 0px !important; */
+    }
+    
+</style>
+    <!-- SITE CONTENT -->
+    <div class="wrapper" style="background: url('./images/collage2.svg');background-size: cover;">
+        <section class="titlebar">
+<!--
+            <h1 class="page-title"><span>Login </span>us</h1>
+            <div id="particles-js"></div>
+-->
+        </section>
+        
+<!--        <hr class="col-md-6 bottom_60">-->
+
+        <div class="cont">
+            <section class="contact col-md-8 offset-md-2 top_90">
+                <div class="contact-info text-center hidden-xs" style="visibility: hidden;">
+                    <p>#35/5, Eldams Road, Alwarpet, Chennai, Tamil Nadu 600018.</p> 
+                    <a href="mailto:hello@promo.works">hello@promo.works</a> 
+                    <p>+91 94 88 88 99 89</p>
+                </div>
+                <div class="contact-form top_90">
+                              {{#if success_msg}}
+            <div class="alert alert-success text-center">{{success_msg}}</div>
+          {{/if}}
+
+          {{#if error_msg}}
+            <div class="alert alert-danger text-center">{{error_msg}}</div>
+          {{/if}}
+
+          {{#if error}}
+            <div class="alert alert-danger text-center">{{error}}</div>
+          {{/if}}
+                    <form class="row" action ="/" method="post" >
+                        <div class="col-md-6">
+                            <input class="inp" type="text" placeholder="username" name="username" id="username" autocomplete="off">
+                        </div>
+
+                        <div class="col-md-6">
+                            <input class="inp" type="password" placeholder="password" name="password" id="password" autocomplete="off">
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <input type="submit" value="Here We Go" class="site-btn2">
+                        </div>
+                    </form>
+                    <br/>
+                    <br/>
+                    <br/>
+
+                    <div class="text-center">
+                        <p>By clicking on Login, you are agreeing to Promoworks <a href="https://promo.works/privacy" rel="noopener" target="_blank">Privacy Policy</a></p>
+                        <a href="/forgot">Forgot Password</a>
+                    </div>
+                </div>
+
+
+
+            </section>
+
+        </div> <!-- cont end -->
+    </div> <!-- wrapper end -->
+

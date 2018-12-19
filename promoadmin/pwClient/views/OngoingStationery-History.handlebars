@@ -1,0 +1,40 @@
+<header>
+    <a href="/home/home/{{user.username}}"><img src="/images/logo.jpg" alt="" class="img-responsive" width="50px" height="50px"></a>
+    <div class="nav-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+
+<div class="wrapper">
+
+    
+           <section class="titlebar">
+            <h1 class="page-title"><span>Stationery </span>History</h1>
+            <div id="particles-js"></div>
+        </section>
+    
+    <div class="cont">
+        <section class="portfolio-single type-2 top_90">
+
+            <div class="portfolio-images top_60 row">
+                {{#each OngoingStationery}}
+                {{#if Disable}}
+                <figure class="col-md-12 bottom_30">
+                    <img src="{{this.stationery_final_path}}" alt="" id="image" name="image">
+                </figure>
+                <div class="leave-reply top_90 container"></div>
+                {{/if}}
+                {{/each}}
+
+
+                
+                
+    
+            </div>
+        </section>
+
+    </div>
+    <!-- cont end -->
+</div>

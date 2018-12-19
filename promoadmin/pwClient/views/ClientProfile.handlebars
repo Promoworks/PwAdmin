@@ -1,0 +1,125 @@
+<header>
+        <img src="/images/logo.jpg" alt="" class="img-responsive" width="50px" height="50px">
+        <div class="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+
+    <!-- SITE CONTENT -->
+    <div class="wrapper">
+        <section class="titlebar">
+            <h1 class="page-title"><span>My </span>Account</h1>
+            <div id="particles-js"></div>
+        </section>
+        
+
+
+        <div class="cont">
+            
+            <style>
+            .a_about_h5_section {
+    margin-top: 79px;
+    overflow: hidden;
+    display:contents;
+}
+                .ag_about_pic {
+    position: relative;
+    padding-bottom: 8px;
+}
+                .ag_about_pic img {
+    width: 85%;
+}
+                .asdas {
+    position: absolute;
+    right: 76px;
+    bottom: 0px;
+    height: 5px;
+    width: 78.5%;
+    background-color: #ffb063;
+}
+                .asdas2 {
+    position: absolute;
+    right: 75px;
+    top: 28px;
+    height: 97%;
+    width: 5px;
+    background-color: #ffb063;
+}
+                
+                .ag_about_details_h5 p {
+    color: #717171;
+    font-size: 14px;
+    line-height: 45px;
+    margin-bottom: 22px;
+    letter-spacing: .5px;
+    font-family: 'Roboto', sans-serif;
+}
+            </style>
+            
+            <div class="container">
+                <div class="row">
+                    <div class="a_about_h5_section">
+                        <div class="col-md-6">
+                            <div class="ag_about_pic">
+                                <img src="http://admin.promo.works{{user.Companylogo_final_path}}" alt="">
+                                <div class="asdas"></div>
+                                <div class="asdas2"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                    <form class="row" action ="/home/CheckOTP/{{user._id}}" method="post" >
+                            <div class="ag_about_details_h5 wow fadeInRight" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInRight;margin-top: 80px;">
+                                <p>Client ID : -  <input class="inp" type="text" placeholder="Id" name="ide" id="ide" autocomplete="off" value ="{{user._id}}" readonly style="margin:0px;"></p>
+
+                                <p>Client Name : - <input class="inp" type="text" placeholder="Username" name="username" id="username" autocomplete="off" value ="{{user.username}}" readonly style="margin:0px;"></p>
+
+                                <p>Reg Mobile : - <input class="inp" type="text" placeholder="Mobile Number" name="mobile" id="mobile" autocomplete="off" value ="{{user.mobile}}" readonly style="margin:0px;"></p>
+                                
+                                <p>Reg Email : - <input class="inp" type="text" placeholder="Email" name="email" id="email" autocomplete="off" value ="{{user.email}}" readonly style="margin:0px;"></p>
+                                
+                                <p>Status : - <input class="inp" type="text" placeholder="client Status" name="status" id="status" autocomplete="off" value ="{{user.status}}" readonly style="margin:0px;"></p>
+                                <div class="col-md-12">
+                                    <input type="submit" value="Edit" class="site-btn2" style="width:100%;">
+<!--                                    <a href="/home/CheckOTP/{{user._id}}/{{user.mobile}}" class="site-btn2">Edit</a>-->
+                        </div>
+                            </div>
+                     </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+        </div>
+        <!-- cont end -->
+    </div> <!-- wrapper end -->
+
+    <footer>
+       <div class="cont">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12 copyright">
+                    <img src="/images/logo.png" alt="">
+                    <p>© 2018 Promoworks</p>
+                </div>
+                <div class="col-md-4 d-sm-none d-md-block">
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook"></i>  </a>
+                        <a href="#"><i class="fab fa-twitter"   aria-hidden="true"></i>  </a>
+                        <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i>  </a>
+                        <a href="#"><i class="fab fa-behance"   aria-hidden="true"></i>  </a>
+                        <a href="#"><i class="fab fa-dribbble"  aria-hidden="true"></i>  </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 d-none d-sm-block getintouch">
+                    <a href="#">
+                        <strong>Get In Touch</strong><br>
+                        <p>hello@promo.works</p>
+                    </a>
+                </div>
+            </div>
+       </div>
+    </footer>

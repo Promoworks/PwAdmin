@@ -1,0 +1,119 @@
+<section class="content blog-page">
+
+<div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-sm-12">
+                <div class="card overflowhidden m-t-20">
+                    <div class="profile-header">
+                        <div class="profile_info row">
+                            <div class="col-lg-3 col-md-4 col-12">
+                                <div class="profile-image float-md-right"> <img src="/images/Twiter.jpg" alt="Promoworks" class="round" width="15%;"> </div>
+                            </div>
+                            <div class="col-lg-6 col-md-8 col-12">
+                                <h4 class="m-t-5 m-b-0"><strong>{{user.username}}</strong></h4>
+                                <span class="job_post">The Brander's</span>
+                                            {{#each ProfileDetails}}
+                                <p>{{this.Bio}}</p>
+                                               {{/each}}
+<!--
+                                <div class="m-t-10">
+                                    <button class="btn btn-raised btn-default">Follow</button>
+                                    <button class="btn btn-raised btn-default">Message</button>
+                                </div>
+-->
+                                <p class="social-icon m-t-20 m-b-0 profile-social">
+                                    <a title="Twitter" href="https://twitter.com/promoworkslive"><i class="zmdi zmdi-twitter"></i></a>
+                                    <a title="Facebook" href="https://www.facebook.com/PromoWorksOfficial/"><i class="zmdi zmdi-facebook"></i></a>
+                                    <a title="Pinterest" href="https://www.pinterest.com/promoworkslive/"><i class="zmdi zmdi-pinterest"></i></a>
+                                    <a title="Instagram" href="https://www.instagram.com/promoworksofficial/"><i class="zmdi zmdi-instagram "></i></a>
+                                </p>
+                            </div>                
+                        </div>
+                    </div>
+                    <div class="profile-sub-header">
+                        <div class="box-list">
+                            <ul class="text-center">
+                 
+                                {{#each ProfileDetails}}
+                                
+                                <li><a href="https://{{this.site_address}}" target="_blank" rel="noopener"><i class="zmdi zmdi-http"></i><p>{{this.site_address}}</p></a></li>
+                                <li><a href="javascript:void(0);"><i class="zmdi zmdi-gps-dot"></i><p>{{this.loc_address}}</p></a></li>
+                               
+                                {{/each}}
+                                
+                                <li><a href="tel:{{user.mobile}}"><i class="zmdi zmdi-code-smartphone"></i><p>+{{user.mobile}}</p></a></li>
+                                <li><a href="/profile/EditProfile/{{user.username}}"><i class="zmdi zmdi-account"></i><p>Edit Profile</p></a></li>
+                                <li><a href="javascript:void(0);"><i class="zmdi zmdi-format-subject"></i><p>Events (Coming Soon)</p></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>        
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>About Me</h2>
+                    </div>
+                    <div class="body">
+                        {{#each ProfileDetails}}
+                        
+                        <p class="text-default">{{this.Bio}}</p>
+                        
+                        {{/each}}
+                        
+                        <blockquote>
+                            <small>Designer <cite title="Source Title">{{user.username}}</cite></small>
+                        </blockquote>
+                    </div>
+                </div>
+
+             
+<!--
+                <div class="row clearfix social-widget">
+                    <div class="col-lg-6 col-md-4 col-6">
+                        <div class="card info-box-2 hover-zoom-effect facebook-widget">
+                            <div class="icon"><i class="zmdi zmdi-facebook"></i></div>
+                            <div class="content">
+                                <div class="text">Like</div>
+                                <div class="number">123</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-6">
+                        <div class="card info-box-2 hover-zoom-effect instagram-widget">
+                            <div class="icon"><i class="zmdi zmdi-instagram"></i></div>
+                            <div class="content">
+                                <div class="text">Followers</div>
+                                <div class="number">231</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-6">
+                        <div class="card info-box-2 hover-zoom-effect twitter-widget">
+                            <div class="icon"><i class="zmdi zmdi-twitter"></i></div>
+                            <div class="content">
+                                <div class="text">Followers</div>
+                                <div class="number">31</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-4 col-6">
+                        <div class="card info-box-2 hover-zoom-effect linkedin-widget">
+                            <div class="icon"><i class="zmdi zmdi-linkedin"></i></div>
+                            <div class="content">
+                                <div class="text">Followers</div>
+                                <div class="number">2510</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+-->
+            </div>
+
+        </div>
+    </div>
+</section>

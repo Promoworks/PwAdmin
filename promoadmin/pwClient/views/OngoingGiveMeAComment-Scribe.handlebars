@@ -1,0 +1,114 @@
+<header>
+        <img src="/images/logo.jpg" alt="" class="img-responsive" width="50px" height="50px">
+        <div class="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+
+<div class="wrapper">
+        <section class="titlebar">
+            <h1 class="page-title"><span>Ongoing </span>Scribe Comments</h1>
+            <div id="particles-js"></div>
+        </section>
+    
+        <div class="cont">
+            <section class="portfolio-single type-2 top_90">
+
+                <div class="portfolio-images top_60 row">
+  
+                    
+
+                                                         
+                <div class="article-comments top_120 container">
+                    <h2 class="subtitle">Post Comments</h2>
+                    <!-- a comment -->
+                    
+
+
+            {{#each ScribeCommentsSection}}
+                    <img src="http://admin.promo.works{{this.scribe_final_path}}" alt="{{user.username}}">
+                    
+                    <div class="comment row top_60">
+                        <figure class="col-md-2">
+                            <img src="http://admin.promo.works{{this.Companylogo_final_path}}" alt="{{user.username}}">
+                        </figure>
+                        <div class="comment-content col-md-10">                    
+                            <h3 class="title top_15">{{this.username}}</h3>
+                            <span class="date">{{this.commentDate}}</span>
+                            <p>{{this.message}} </p>
+<!--                            <p><a href="javascript:void(0);">Delete</a> </p>-->
+                            <p>Posted On : {{this.commentTime}} </p>
+                        </div>
+
+
+                    </div>
+                    {{#if this.AdminComments}}
+                    <div class="comment reply row top_45">
+                        <figure class="col-md-2">
+                            <img src="/images/logo.jpg" alt="">
+                        </figure>
+                        <div class="comment-content col-md-10">                    
+                            <h3 class="title top_15">{{this.AdminName}}</h3>
+                            <span class="date">{{this.AdminDate}}</span>
+                            <p>{{this.AdminComments}} </p>
+                            <p>Posted On : {{this.AdminTime}} </p>
+                        </div>
+                    </div>
+                    {{/if}}
+
+            {{/each}}
+                </div>
+                    
+                    
+
+                       <form class="row" style="display: contents !important;" method="post" action="/progress/OngoingScribe/{{user._id}}/{{user.username}}">
+
+
+                    <div class="leave-reply top_90 container">
+
+                    <h2 class="subtitle bottom_45">Leave a Reply</h2>
+                        <div class="col-md-7 col-md-offset-1" style="display:none;">
+                            <input class="inp" type="text" placeholder="Name" name="userid" id="userid" value="{{user._id}}" readonly>
+                        </div>              
+     
+                        <div class="col-md-7 col-md-offset-1">
+                            <input class="inp" type="text" placeholder="Place your Menu Id Here" name="scribeid" id="scribeid">
+                        </div>
+                        <div class="col-md-7 col-md-offset-1" >
+                            <input class="inp" type="text" placeholder="Name" name="username" id="username" value="{{user.username}}" readonly>
+                        </div>        
+                        <div class="col-md-7 col-md-offset-1" style="display:none;" >
+                            <input class="inp" type="text" placeholder="logo" name="logo" id="logo" value="{{user.Companylogo_final_path}}" readonly>
+                        </div>
+                         <div class="col-md-7 col-md-offset-1" style="display:none;">
+                            <input class="inp" type="text" placeholder="mobile" name="mobile" id="mobile" value="{{user.mobile}}" readonly>
+                        </div>
+                        <div class="col-md-7 col-md-offset-1">
+                                <input class="inp" type="text" placeholder="Name" name="brand" id="brand" value="Promotional-Videos" readonly>
+                        </div>
+                        <div class="col-md-7 col-md-offset-1">
+                            <textarea placeholder="Your Comment" rows="8" class="col-md-12 form-message" id="message" name="message"></textarea>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="submit" value="Update Your Comments" class="site-btn2">
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="leave-reply top_90 container"></div>
+                    </form>
+
+                  
+                </div>
+
+
+                    
+                    
+            </section>
+
+        </div> <!-- cont end -->
+
+    </div>
